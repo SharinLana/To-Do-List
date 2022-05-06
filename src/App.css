@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+body {
+  background-color: #e9e6ea;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-main-container {
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 400px;
+  margin-top: 50px;
+}
+
+.App-header {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  color: #235298;
+}
+
+.InputArea-main-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.InputArea-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.InputArea-input-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  padding: 15px;
+  background-color: #3171bb;
+  font-family: 'Nunito', sans-serif;
+}
+
+input {
+  outline: none;
+  width: 260px;
+  height: 26px;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #245399d3;
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  color: #9c9c9c;
+}
+
+.InputArea-add-btn {
+  width: 60px;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 7px;
+  color: #235298;
+}
+
+ul {
+  list-style: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  width: 400px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 30px;
+  background-color: white;
+  box-shadow: 0px 2px 4px grey;
+  color: #245399;
+}
+
+.InputArea-edit-icon, .InputArea-done-icon,
+.InputArea-trash-icon {
+  width: 25px;
+  margin: 0px 8px;
+}
+
+.InputArea-edit-icon {
+  width: 23px;
+}
+
+.InputArea-done-icon {
+  width: 30px;
+}
+
+.crossed {
+  text-decoration: line-through;
+  background-color: #cecdcd;
+  opacity: 0.5;
+}
+
+@media all and (max-width: 500px) {
+  .App-container, .InputArea-input-container, ul  {
+    width: 350px;
   }
-  to {
-    transform: rotate(360deg);
+
+  input {
+    height: 30px;
   }
 }
+
+@media all and (max-width: 400px) {
+  .App-container, .InputArea-input-container, ul  {
+    width: 300px;
+  }
+
+  input {
+    width: 200px;
+  }
+
+  .InputArea-add-btn {
+    font-size: 13px;
+    padding: 9.5px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .App-container, .InputArea-input-container, ul  {
+    width: 260px;
+  }
+
+  input {
+    width: 170px;
+  }
+
+  .InputArea-add-btn {
+    font-size: 13px;
+
+  }
+}
+
+@media all and (max-width: 300px) {
+  .App-container, .InputArea-input-container, ul  {
+    width: 230px;
+  }
+
+  input {
+    width: 140px;
+  }
+
+  .InputArea-add-btn {
+    font-size: 13px;
+
+  }
+}
+
+
+
