@@ -37,7 +37,6 @@ export class InputArea extends Component {
     removeItem(itemIndex) {
         let array = this.state.listArray;
         let removedItem = array.splice(itemIndex, 1, null);
-        console.log(removedItem)
 
         if (removedItem) {
             let list = document.querySelectorAll('li');
@@ -62,17 +61,18 @@ export class InputArea extends Component {
         return (
             <div className='InputArea-main-container'>
                 <form onSubmit={this.enterPressed}> 
+            
                 <div className='InputArea-container'>
                     <div className='InputArea-input-container'>
+                        
                         <input type='text' placeholder='What are you up to today?'
                         onChange={(e) => {this.onChangeEvent(e.target.value)}}/>
 
                         <button className='InputArea-add-btn'
                         onClick={() => {this.addItem(this.state.inputField)}}
                         >ADD</button>
+
                     </div>
-
-
 
                     <ul>
                         {this.state.listArray.map((item, index) => (
@@ -85,14 +85,12 @@ export class InputArea extends Component {
                             <img className='InputArea-trash-icon' src={trash} alt='icon2'
                             onClick={() => {this.removeItem(index)}}/>
                             </div>
+
                             </li>
                          ))}
                     </ul>
-
-
-
-
                 </div>
+
                 </form>
             </div>
         )
